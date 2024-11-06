@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const formData = {
             car_mileage: parseFloat(document.getElementById('car_mileage').value),
             car_fuel_type: document.getElementById('car_fuel_type').value,
-            car_efficiency: parseFloat(document.getElementById('car_efficiency').value)
         };
         const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 
-    // Helper function to get CSRF token
     function getCookie(name) {
         let cookieValue = null;
         if (document.cookie && document.cookie !== '') {

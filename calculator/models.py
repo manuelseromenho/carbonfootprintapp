@@ -13,7 +13,6 @@ class CarbonFootprint(models.Model):
         null=True,
         blank=True,
     )
-    car_efficiency = models.FloatField(null=True, blank=True)  # mpg
     motorbike_mileage = models.FloatField(null=True, blank=True)
     motorbike_engine_size = models.IntegerField(null=True, blank=True)  # cc
     electricity_consumption = models.FloatField(null=True, blank=True)  # kWh

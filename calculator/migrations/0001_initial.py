@@ -35,7 +35,6 @@ class Migration(migrations.Migration):
                         null=True,
                     ),
                 ),
-                ("car_efficiency", models.FloatField(blank=True, null=True)),
                 ("motorbike_mileage", models.FloatField(blank=True, null=True)),
                 ("motorbike_engine_size", models.IntegerField(blank=True, null=True)),
                 ("electricity_consumption", models.FloatField(blank=True, null=True)),
