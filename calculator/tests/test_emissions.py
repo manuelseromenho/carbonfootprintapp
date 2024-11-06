@@ -58,9 +58,7 @@ class TestCarbonFootprintViews:
             results = response.context["results"]
             assert abs(results["car_emissions"] - 2.94) < 0.01
             assert abs(results["motorbike_emissions"] - 1.47) < 0.01
-            assert (
-                abs(results["electricity_emissions"] - 50.0) < 0.01
-            )
+            assert abs(results["electricity_emissions"] - 50.0) < 0.01
             assert abs(results["total_emissions"] - 54.41) < 0.01
 
 

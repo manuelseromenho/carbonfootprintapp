@@ -4,15 +4,56 @@
     <div class="container">
         <h1>Your Carbon Footprint Results</h1>
         <div class="results">
-            <h3>Total Emissions: {{ footprint.total_emissions|floatformat:2 }} kg CO2</h3>
+            <h3>Total Emissions: {{ results.total_emissions|floatformat:2 }} kg CO2</h3>
             <div class="breakdown">
                 <h4>Breakdown:</h4>
                 <ul>
-                    <li>Car: {{ car_emissions|floatformat:2 }} kg CO2</li>
-                    <li>Motorbike: {{ motorbike_emissions|floatformat:2 }} kg CO2</li>
-                    <li>Electricity: {{ electricity_emissions|floatformat:2 }} kg CO2</li>
+                    <li>Car: {{ results.car_emissions|floatformat:2 }} kg CO2</li>
+                    <li>Motorbike: {{ results.motorbike_emissions|floatformat:2 }} kg CO2</li>
+                    <li>Electricity: {{ results.electricity_emissions|floatformat:2 }} kg CO2</li>
                 </ul>
             </div>
         </div>
+        <a href="{% url 'calculator:home' %}" class="btn btn-primary mt-3">Back to Calculator</a>
     </div>
 {% endblock %}
+
+{#{% extends 'calculator/base.html' %}#}
+{##}
+{#{% block content %}#}
+{#    <div class="container">#}
+{#        <h1>Your Carbon Footprint Results</h1>#}
+{#        <div class="results">#}
+{#            <h3>Total Emissions: {{ results.total_emissions|floatformat:2 }} kg CO2</h3>#}
+{#            <div class="breakdown">#}
+{#                <h4>Breakdown:</h4>#}
+{#                <ul>#}
+{#                    <li>Car: {{ results.car_emissions|floatformat:2 }} kg CO2</li>#}
+{#                    <li>Motorbike: {{ results.motorbike_emissions|floatformat:2 }} kg CO2</li>#}
+{#                    <li>Electricity: {{ results.electricity_emissions|floatformat:2 }} kg CO2</li>#}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+{#        <a href="{% url 'calculator:home' %}" class="btn btn-primary mt-3">Back to Calculator</a>#}
+{#    </div>#}
+{#{% endblock %}#}
+
+
+{#{% extends 'calculator/base.html' %}#}
+{##}
+{#{% block content %}#}
+{#    <div class="container">#}
+{#        <h1>Your Carbon Footprint Results</h1>#}
+{#        <div class="results">#}
+{#            <h3>Total Emissions: {{ footprint.total_emissions|floatformat:2 }} kg CO2</h3>#}
+{#            <div class="breakdown">#}
+{#                <h4>Breakdown:</h4>#}
+{#                <ul>#}
+{#                    <li>Car: {{ car_emissions|floatformat:2 }} kg CO2</li>#}
+{#                    <li>Motorbike: {{ motorbike_emissions|floatformat:2 }} kg CO2</li>#}
+{#                    <li>Electricity: {{ electricity_emissions|floatformat:2 }} kg CO2</li>#}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock %}#}
