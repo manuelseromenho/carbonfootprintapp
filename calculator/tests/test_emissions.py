@@ -21,7 +21,7 @@ class TestEmissionsCalculation:
         input_data = {"motorbike_mileage": 50.0, "motorbike_engine_size": 250}
 
         emissions = calculate_emissions.calculate_motorbike_emissions(**input_data)
-        expected_emission = 1.47 # 50 * 0.164 = 8.2
+        expected_emission = 1.47  # 50 * 0.164 = 8.2
 
         assert abs(emissions - expected_emission) < 0.01
 
@@ -58,7 +58,9 @@ class TestCarbonFootprintViews:
             results = response.context["results"]
             assert abs(results["car_emissions"] - 2.94) < 0.01
             assert abs(results["motorbike_emissions"] - 1.47) < 0.01
-            assert abs(results["electricity_emissions"] - 50.0) < 0.01  # Updated (200 * 0.25)
+            assert (
+                abs(results["electricity_emissions"] - 50.0) < 0.01
+            )  # Updated (200 * 0.25)
             assert abs(results["total_emissions"] - 54.41) < 0.01
 
 

@@ -1,9 +1,4 @@
-EMISSION_FACTORS = {
-    "petrol": 2.94,
-    "diesel": 2.68,
-    "hybrid": 1.81,
-    "electricity": 0.25
-}
+EMISSION_FACTORS = {"petrol": 2.94, "diesel": 2.68, "hybrid": 1.81, "electricity": 0.25}
 
 
 def calculate_car_emissions(car_mileage, car_fuel_type):
