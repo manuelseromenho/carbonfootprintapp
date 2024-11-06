@@ -1,0 +1,46 @@
+{% extends 'calculator/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Calculate Your Carbon Footprint</h2>
+                </div>
+                <div class="card-body">
+                    <form id="carbonForm">
+                        <div class="mb-3">
+                            <h4>Transportation</h4>
+                            <div class="form-group">
+                                <label for="car_mileage">Car Mileage (miles)</label>
+                                <input type="number" class="form-control" id="car_mileage" name="car_mileage">
+                            </div>
+                            <div class="form-group">
+                                <label for="car_fuel_type">Fuel Type</label>
+                                <select class="form-control" id="car_fuel_type" name="car_fuel_type">
+                                    <option value="petrol">Petrol</option>
+                                    <option value="diesel">Diesel</option>
+                                    <option value="hybrid">Hybrid</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="car_efficiency">Car Efficiency (miles per gallon)</label>
+                                <input type="number" class="form-control" id="car_efficiency" name="car_efficiency">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Calculate</button>
+                    </form>
+
+                    <div id="results" class="mt-4" style="display: none;">
+                        <h4>Your Carbon Footprint Results</h4>
+                        <div class="alert alert-info">
+                            <p>Total Emissions: <span id="totalEmissions">0</span> kg CO2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

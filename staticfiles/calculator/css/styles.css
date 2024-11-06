@@ -1,0 +1,11 @@
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+#results {
+    transition: all 0.3s ease;
+}
